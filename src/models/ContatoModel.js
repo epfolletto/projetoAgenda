@@ -1,23 +1,24 @@
-//const { userSetter } = require('core-js/library/es6/symbol');
 const mongoose = require('mongoose');
+// Importa o validator de email
 const validator = require('validator');
 
+// Configurando o model
 const ContatoSchema = new mongoose.Schema({
     nome: { type: String, required: true },
     sobrenome: { type: String, required: false, default: '' },
     email: { type: String, required: false, default: '' },
     telefone: { type: String, required: false, default: '' },
     criadoEm: { type: Date, default: Date.now },
-    criadoPor: { type: String, required: false, default: ''}
+    criadoPor: { type: String, required: false}
 });
 
 const ContatoModel = mongoose.model('Contato', ContatoSchema);
 
-function Contato(body, userr) {
+function Contato(body, userEmail) {
     this.body = body;
     this.errors = [];
     this.contato = null;
-    this.userr = userr.email;
+    this.user = userEmail;
 }
 
 Contato.prototype.register = async function () {
@@ -53,7 +54,7 @@ Contato.prototype.cleanUp = function () {
         sobrenome: this.body.sobrenome,
         email: this.body.email,
         telefone: this.body.telefone,
-        criadoPor: this.userr
+        criadoPor: this.user
     };
 };
 

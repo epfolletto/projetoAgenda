@@ -1,10 +1,13 @@
+// Carrega o Express
 const express = require('express');
+// Instancia o express
 const route = express.Router();
-
+// Importa os controllers da home, login e contato
 const homeController = require('./src/controllers/homeController');
 const loginController = require('./src/controllers/loginController');
 const contatoController = require('./src/controllers/contatoController');
 
+// Importa a verificação de usuário logado
 const {loginRequired} = require('./src/middlewares/middleware');
 
 // Rotas da home
@@ -23,4 +26,5 @@ route.get('/contato/index/:id', loginRequired, contatoController.editIndex);
 route.post('/contato/edit/:id', loginRequired, contatoController.edit);
 route.get('/contato/delete/:id', loginRequired, contatoController.delete);
 
+// Exporta todas as rotas
 module.exports = route;
