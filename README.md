@@ -1,16 +1,18 @@
 <p align="center">
   <a href="#Projeto">Projeto</a> ◦ 
-  <a href="#Descrição">Descrição</a> ◦ 
+  <!-- <a href="#Descrição">Descrição</a> ◦ -->
   <a href="#Status">Status</a> ◦ 
-  <a href="#Sobre">Sobre</a> ◦ 
+  <!-- <a href="#Sobre">Sobre</a> ◦ -->
   <a href="#Tecnologias">Tecnologias</a> ◦ 
-  <a href="#Link">Link</a> ◦ 
-  <a href="#Instalndo e rodado o projeto">Link</a> ◦
+  <!-- <a href="#Link">Link</a> ◦ -->
+  <!-- <a href="#Instando e rodado o projeto">Instando e rodado o projeto</a> ◦ -->
   <a href="#Autor">Autor</a>
 </p>
 
 # Projeto
 Agenda
+
+<!-- 
 
 # Descrição
 Este projeto foi feito com o intuíto de verificar algumas formas de fazer uma requisição: XMLHttpRequest, Promises, Fetch e Axios. O objetivo é ler
@@ -20,8 +22,12 @@ requisitar o arquivo é criada uma tabela com colunas id, estado e sigla.
   <img src="assets/img/exemplo.png" alt="Estados.">
 </div>
 
+-->
+
 # Status
 Finalizado
+
+<!-- 
 
 # Sobre
 Aplicação da Web desenvolvida com a finalidade de aprendizagem dos conteúdos de HTML5, CSS e JavaScript. 
@@ -46,9 +52,15 @@ O documento "main.js" possui as seguintes instruções:
     - após criada a função, a mesma é requisitada, passando como parâmetros "method", "url" e as funções de sucesso e erro;  
     - as requisições do tipo fetch e axios são parecidas entre si e mais simples que a anterior.
 
+-->
+
+<!-- 
+
 # Link
 A hospedagem foi feita utilizando o GitHub, que oferece serviço de hospedagem de sites.
 - [URL do Site](https://epfolletto.github.io/requisicao/)
+
+-->
 
 # Tecnologias
 <div>
@@ -57,9 +69,18 @@ A hospedagem foi feita utilizando o GitHub, que oferece serviço de hospedagem d
 <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
 <img src="https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white">
 <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white">
+<img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white">
+<img src="https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white">
+<img src="https://img.shields.io/badge/Express.js-404D59?style=for-the-badge">
+<img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white">
+<img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white">
 </div>
 
+<!-- 
+
 # Instalando e rodando o projeto
+
+-->
 
 # Autor
 Evandro Paulo Folletto
