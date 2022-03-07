@@ -1,0 +1,54 @@
+<%- include('includes/head.ejs')%>
+<%- include('includes/nav.ejs')%>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-2"></div>
+
+        <div class="col-lg-8 my-3">
+            <% if(user) { %>
+                <h1 class="text-center">Agenda</h1>
+                <p class="text-center lead">Seus contato estão abaixo</p>
+                <% if (contatos.length > 0) { %>
+                <div class="responsive-table">
+                    <table class="table my-3">
+
+                        <!-- Adiciona primeira linha para nomear colunas -->
+                        <tr>
+                            <td><b> Nome </b></td>
+                            <td><b> Sobrenome </b></td>
+                            <td><b> Telefone </b></td>
+                            <td><b> E-mail </b></td>
+                            <td><b> Criado por: </b></td>
+                            <td><b> Editar </b></td>
+                            <td><b> Excluir </b></td>
+                        </tr>
+                        <% contatos.forEach(contato => { %>
+                            <% if(user.email === contato.criadoPor) { %>
+                            <tr>
+                                <td> <%= contato.nome %> </td>
+                                <td> <%= contato.sobrenome %> </td>
+                                <td> <%= contato.telefone %> </td>
+                                <td> <%= contato.email %> </td>
+                                <td> <%= contato.criadoPor %> </td>
+                                <td> <a href="contato/index/<%= contato._id %>"> Editar </a> </td>
+                                <td> <a class="text-danger" href="contato/delete/<%= contato._id %>"> Excluir </a> </td>
+                            </tr>
+                            <% } %>
+                        <% }); %>
+
+                    </table>
+                </div>
+                <% } else { %>
+                    <p class="text-center lead">Não existem contatos na sua agenda</p>
+                <% } %>
+            <% } else {%>
+                <h1 class="text-center">Agenda</h1>
+                <p class="text-center lead">Faça Login para ver seus contatos</p>
+            <% } %>
+        </div>
+        <div class="col-lg-2"></div>
+    </div>
+</div>
+
+<%- include('includes/footer.ejs')%>
